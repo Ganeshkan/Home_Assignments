@@ -2,20 +2,25 @@ package week1.day2;
 
 public class IsPrime {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int n = 20;
-		int d = 0;
-		for (int i = 2; i <= n - 1; i++) {
-			if (n % i == 0) {
+		int num = 17; // You can change this number to test other values
+        boolean isPrime = true;
 
-				System.out.println("Is Not a Prime Number");
-
-				d = d + 1;
-				break;
-			}
-		}
-		if (d == 0)
-
-			System.out.println("Is  a Prime Number");
+        // Check if number is less than or equal to 1
+        if (num <= 1) {
+            isPrime = false;
+        } else {
+            // Iterate from 2 to num - 1
+            for (int i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+        if (isPrime) {
+            System.out.println(num + " is a Prime Number.");
+        } else {
+            System.out.println(num + " is NOT a Prime Number.");
+        }
 	}
 }
