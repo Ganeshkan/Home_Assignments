@@ -13,8 +13,7 @@ public class CreateAccount {
 		ChromeDriver driver = new ChromeDriver(options); //Initialize the Webdriver(ChromeDriver)
 		driver.get("http://leaftaps.com/opentaps/control/main");// load  the Url
 		driver.manage().window().maximize();// Maximize the browser window.
-		driver.getTitle();
-		
+		driver.getTitle(); 
 //		Enter a username and password. 
 		driver.findElement(By.id("username")).sendKeys("demosalesmanager");
 		driver.findElement(By.id("password")).sendKeys("crmsfa"); 

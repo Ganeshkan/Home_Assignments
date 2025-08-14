@@ -15,32 +15,19 @@ public class CreateLead {
 		driver.manage().window().maximize();// Maximize the browser window.
 		driver.getTitle();
 
-		//Enter a username and password.
-		driver.findElement(By.id("username")).sendKeys("demosalesmanager");
+		driver.findElement(By.id("username")).sendKeys("demosalesmanager");//Enter a username and password.
 		driver.findElement(By.id("password")).sendKeys("crmsfa");
-		//Click the "Login" button. 
-		driver.findElement(By.className("decorativeSubmit")).click();
-		//Click on the "CRM/SFA" link. 
-		driver.findElement(By.partialLinkText("CRM/SFA")).click();
-		//Click on the "Leads" tab. 
-		driver.findElement(By.partialLinkText("Leads")).click();
-		//Click on the "Create Lead" button. 
-		driver.findElement(By.partialLinkText("Create Lead")).click();
-		//Enter a FirstName. 
-		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Ganesh");
-		//Enter a LastName. 
-		driver.findElement(By.id("createLeadForm_lastName")).sendKeys("kumar");
-		//Enter a CompanyName. 
-		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("Testleaf");
-		//Enter a Title . 
-		String title = driver.getTitle();
-		//Click the "Create Lead" button.
-		driver.findElement(By.name("submitButton")).click();
-		//Print theTitle.
-		System.out.println(title);
-		//Close the browser window.
-		driver.close();
-
+		driver.findElement(By.className("decorativeSubmit")).click();//Click the "Login" button.
+		driver.findElement(By.partialLinkText("CRM/SFA")).click();//Click on the "CRM/SFA" link. 
+		driver.findElement(By.partialLinkText("Leads")).click();//Click on the "Leads" tab.
+		driver.findElement(By.partialLinkText("Create Lead")).click();	//Click on the "Create Lead" button. 
+		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Ganesh");//Enter a FirstName. 
+		driver.findElement(By.id("createLeadForm_lastName")).sendKeys("kumar");//Enter a LastName. 
+		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("Testleaf");//Enter a CompanyName.
+		String title = driver.getTitle();//Enter a Title 
+		driver.findElement(By.name("submitButton")).click();//Click the "Create Lead" button.
+		System.out.println(title);//Print theTitle.
+		driver.close();//Close the browser window.
 	}
 }
 
