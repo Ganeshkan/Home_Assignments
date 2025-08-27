@@ -1,9 +1,6 @@
 package week3.day4;
 
 import java.time.Duration;
-import java.util.LinkedList;
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
