@@ -1,15 +1,14 @@
 package week2.day4;
 
-import static org.testng.Assert.assertEquals;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
 
 public class DeleteLead {
-
-	public static void main(String[] args) throws InterruptedException {
+@Test
+	public void deleteLead() throws InterruptedException {
 		//launch chrome browser as guest mode
 		ChromeOptions options= new ChromeOptions();
 		options.addArguments("guest");

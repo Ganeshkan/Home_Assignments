@@ -37,24 +37,22 @@ public class WindowHandling {
 		//Click on Merge Contacts.
 		driver.findElement(By.xpath("//a[text()='Merge Contacts']")).click();
 
-		//Click on the widget of the "From Contact"
+		//-------Click on the widget of the "From Contact"-------
 		driver.findElement(By.xpath("(//img[@alt='Lookup'])[1]")).click();
 		Set<String> Window = driver.getWindowHandles();
 		List<String> WindowList = new ArrayList<String>(Window);
 		//Click on the first resulting contact
 		driver.switchTo().window(WindowList.get(1));
-		//driver.getWindowHandle();
 		System.out.println(driver.getTitle());
 		driver.findElement(By.xpath("(//table[@class='x-grid3-row-table']//tbody//tr//a)[1]")).click();
 		driver.switchTo().window(WindowList.get(0));
 
-		//Click on the widget of the "To Contact".
+		//-------Click on the widget of the "To Contact".-------
 		driver.findElement(By.xpath("(//img[@alt='Lookup'])[2]")).click();
 		//Click on the second resulting contact.
 		Set<String> window = driver.getWindowHandles();
 		List<String> windowsList = new ArrayList<String>(window);
 		driver.switchTo().window(windowsList.get(1));
-		//driver.getWindowHandle();
 		System.out.println(driver.getTitle());
 		driver.findElement(By.xpath("(//table[@class='x-grid3-row-table']//tbody//tr//a)[1]")).click();
 		driver.switchTo().window(windowsList.get(0));

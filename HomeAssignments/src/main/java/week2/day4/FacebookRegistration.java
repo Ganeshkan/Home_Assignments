@@ -6,14 +6,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class FacebookRegistration {
-
-	public static void main(String[] args) throws InterruptedException {
+@Test
+	public void facebookReg() throws InterruptedException {
 		
 		//Initialize chromedriver
 		ChromeOptions option = new ChromeOptions();
@@ -49,7 +47,7 @@ public class FacebookRegistration {
 		WebElement monthddl = driver.findElement(By.name("birthday_month"));
 		monthddl.click();
 		Select month = new Select(monthddl);
-		day.selectByVisibleText("Jul");
+		month.selectByVisibleText("Jul");
 
 		WebElement YearDDL= driver.findElement(By.name("birthday_year"));
 		YearDDL.click();

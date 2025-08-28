@@ -9,10 +9,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class EditLead {
-
-	public static void main(String[] args) {
+@Test
+	public void editLead() {
 
 		ChromeOptions option = new ChromeOptions();
 		option.addArguments("guest");
